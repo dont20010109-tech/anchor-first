@@ -1,16 +1,19 @@
+[toolchain]
+package_manager = "yarn"
+
 [features]
-seeds = false
+resolution = true
 skip-lint = false
 
 [programs.localnet]
-solora-order-book = "8b5j5Ua8jBDqnCZNB22NJAedd5TBs5NBAjqF65q8BpuS"
-solora-pyth-price = "SPPq79wtPSBeFvYJbSxS9Pj1JdbQARDWxwJBXyTVcRg"
-pyth = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+demo = "9mgEw6JHPAAebWVs57yjByK6owRPo8Er4ZYJjBvX63op"
+
+[registry]
+url = "https://api.apr.dev"
 
 [provider]
 cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-#test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
-test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts --grep ab"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
